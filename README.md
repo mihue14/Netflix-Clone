@@ -1,44 +1,78 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-## Available Scripts
+## `Inicio del proyecto`
 
-In the project directory, you can run:
+- npx-create-react-app netflixclone --template redux
 
-### `npm start`
+## `Proceso de limpieza`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## `Importar librerias`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- material-ui/core 
+- axios 
+- firebase 
+- react-router-dom 
+- react-uuid 
+- styled-components
 
-### `npm test`
+## `App.js - Layout inicial`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Creamos las rutas
+- Renderizamos Login o el resto del app, de acuerdo si existe un usuario o no
 
-### `npm run build`
+## `Estilos`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Utilizando useStyles creamos una infraesctructura que nos permite asignar estilos a cada uno de los componentes
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## `Creamos las carpetas de los componenetes: components, pages`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Creamos la infraestructura basica de los componentes que representan una página: Home, Login, Paypal, Profile, SingUp
 
-### `npm run eject`
+## `Estilos en los componentes de pages`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Patrón para añadir la infraestructura de estilos a todos los componentes de page :
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+const classes = useStyles();
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+const useStyles = makeStyles((theme) => ({
+  root: {
+    // backgroundColor: "#111",
+    minHeight: "100vh",
+  },
+})
+);
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## `Crear la carpeta components (elementos que no son páginas)`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Creamos la infraestructura básica del resto de componentes: Banner, Header, Plans, Rows
+
+## `Estilos en los componentes de components`
+
+- Patrón para añadir la infraestructura de estilos a todos los componentes de page :
+
+```
+
+const classes = useStyles();
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    // backgroundColor: "#111",
+    minHeight: "100vh",
+  },
+})
+);
+
+```
+
+## `Trabajamos en el componente Header`
+
+- Importamos el logo de Netflix
+- Añadimos al AppBar una clase transparent condicional, cuando la variable show = true se activa esta clase.
+- La variable show se convierte en true, cuando hacemos un scroll vertical de mas de 100 px.
+- Para escuchar cuando hacemos el scroll vertical, añadimos un eventListener al objeto window.
+- El eventListener está activo una sola vez cada vez que refrescamos la página (useEffect con []).
+- Ya montado el componente hay que limpiarlo para que no quede guardado el eventListener.
+- Añadimos las rutas al logo y al avatar.
