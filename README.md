@@ -76,3 +76,11 @@ const useStyles = makeStyles((theme) => ({
 - El eventListener está activo una sola vez cada vez que refrescamos la página (useEffect con []).
 - Ya montado el componente hay que limpiarlo para que no quede guardado el eventListener.
 - Añadimos las rutas al logo y al avatar.
+
+## `Trabajamos en el Banner`
+
+- Importamos un banner de la casa de papel como backgroundImage.
+- En React, acompañamos los backgroundImage con estilos como object-fit, background-size y background-position.
+- Hemos posicionado el titulo de la pelicula, botones y la descripcion.
+- La descripcion de la pelicula viene del API, tenemos que truncar la descripcion para asegurar que entre en el espacio asignado. Declaramos la funcion truncate.
+- Añadimos un div vacío para generar un fade entre el banner y el resto del UI.

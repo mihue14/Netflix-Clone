@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import logo from "../images/netflix-logo.png"
 
 const Header = () => {
-  const classes = useStyles();
+  const classes = useStyles(); // Sirve para agregar estilos.
   const history = useHistory(); // Sirve para navegar entre ubicaciones.
   const [show, setShow] = useState(false); // Creamos un hook con su variable de estado y su funcion. El estado inicial es "false".
   const hideHeader = () => { 
@@ -22,12 +22,12 @@ const Header = () => {
   }, [])
 
   return ( 
-    <AppBar position='sticky' elevation={0} className={`${classes.root} ${show && classes.transparent}`}>    
+    <AppBar position='sticky' elevation={0} className={`${classes.root} ${show && classes.transparent}`}>  {/* Cuando la variable show sea "true" se habilita la clase "transparent." */}  
       <Toolbar className={classes.Toolbar}>
-        <IconButton onClick={() => history.push("/")}>  
-        <img src={logo} alt="Image not found" className={classes.logo}/>
+        <IconButton onClick={() => history.push("/")}>  {/* Al hacer click en la imagen de "Netflix" nos dirige a la ruta "/". */}
+        <img src={logo} alt="Image not found" className={classes.logo}/> {/* Logo de Netflix */}
         </IconButton>
-        <Avatar variant='square' style={{cursor: "pointer"}} onClick={() => history.push("/profile")}  />
+        <Avatar variant='square' style={{cursor: "pointer"}} onClick={() => history.push("/profile")}  /> {/* Al hacer click en el avatar nos dirige a la ruta "/profile" */}
       </Toolbar>
     </AppBar>
   )
