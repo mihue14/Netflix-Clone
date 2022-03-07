@@ -84,3 +84,9 @@ const useStyles = makeStyles((theme) => ({
 - Hemos posicionado el titulo de la pelicula, botones y la descripcion.
 - La descripcion de la pelicula viene del API, tenemos que truncar la descripcion para asegurar que entre en el espacio asignado. Declaramos la funcion truncate.
 - Añadimos un div vacío para generar un fade entre el banner y el resto del UI.
+
+## `Trabajamos en el Login`
+
+- Creamos un botón con styled components y le hemos llamdo NetflixButton. Este botón está customizado por nosotros y podremos variar sus estilos.
+- Styled components para variar los estilos del input o del botón, pero para su posicionamiento le damos una clase normal.
+ 

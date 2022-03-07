@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import React from 'react'
-import Netflixbanner from '../images/lacasadepapel.jpg';
+import Homebanner from '../images/lacasadepapel.jpg';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button/Button';
 
@@ -35,7 +35,7 @@ const Banner = () => {
 const useStyles = makeStyles((theme) => ({
   
   root: {
-    backgroundImage: `url(${Netflixbanner})`,
+    backgroundImage: `url(${Homebanner})`, // Agregamos la imagen como background.
     position: "relative",
     height: "440px",
     objectFit: "contain",
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   buttons: {
-    "& button": {
+    "& button": { // Estilo de los botones.
       cursor: "pointer",
       color: "#fff",
       fontWeight: 700,
@@ -55,13 +55,13 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "rgba(51, 51, 51, 0.5)",
     },
 
-    "& button:hover": {
+    "& button:hover": { // Estilo de los botones al pasar el mouse encima.
       color: "#000",
       backgroundColor: "#e6e6e6",
     }
   },
 
-  fade: {
+  fade: { // Degrade del banner.
     position: "absolute",
     top: "30vh",
     bottom: 0,
