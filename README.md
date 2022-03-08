@@ -114,3 +114,10 @@ const useStyles = makeStyles((theme) => ({
 
 - Habilitamos el slice userSlice para manejar el estado del usuario en el componente que queramos. 
 
+## `Persistencia`
+
+- Hemos añadido un "event listener" en App.js.
+- El event listener trae el obj auth que escucha cada vez que cambia el usuario en firebase.
+- Cada vez que cambie, inyecta el usuario en la capa de datos del userSlice.
+- De esta forma recuerda que ya estamos logueados aunque refresquemos la página.
+
