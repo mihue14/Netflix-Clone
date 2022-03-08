@@ -5,19 +5,39 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Paypal from "./pages/Paypal";
 import Profile from "./pages/Profile";
+import { useEffect } from "react";
+import { auth } from "./firebase";
+import { useDispatch, useSelector } from "react-redux";
+import {login, logout, selectUser} from "./features/UserSlice";
 
 
 function App() {
-  const user = "mihue";  // Usuario.
+  const user = useSelector(selectUser);  // Usuario.
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const unsuscribe = auth.onAuthStateChanged((userAuth) => {
+      if (userAuth) {
+        dispatch(login({
+          uid: userAuth.uid,
+          email: userAuth.email
+        }))
+      } else {
+        dispatch(logout);
+      }
+    })
+    return unsuscribe;
+  }, [dispatch]);
 
   return (
     <div className={classes.root}>
       <Router>
-        {
-          !user ? (<Login/>): (  // Si no existe un usuario ejecutar el componente Login, de lo contrario dar acceso a la página funcional.
             <Switch>
-              <Route path="/profile" >  
+              <Route path="/login">
+                <Login />
+              </Route> 
+              <Route path="/profile">  
                 <Profile />   
               </Route>
               <Route path="/checkout">
@@ -27,8 +47,6 @@ function App() {
                 <Home />
               </Route>
             </Switch>
-          )
-        }
       </Router>
     </div>
   );

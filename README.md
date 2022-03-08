@@ -89,4 +89,28 @@ const useStyles = makeStyles((theme) => ({
 
 - Creamos un botón con styled components y le hemos llamdo NetflixButton. Este botón está customizado por nosotros y podremos variar sus estilos.
 - Styled components para variar los estilos del input o del botón, pero para su posicionamiento le damos una clase normal.
- 
+- Creamos un input personalizado en Styledcomponents llamado NetflixInput. Como InputBase era un componente de material ui, pues lo llamamos styled(InputBase).
+
+## `Trabajamos en el componente Profile`
+
+- Hemos trabajado en la distribución.
+- <Plans>Texto</Plans> ({children} = Texto).
+- Pasamos props a los styled components.
+- En el caso de que el componenete no sea binario, Ej: que el tamaño sea pequeño, grande o mediano, entonces realizamos una funcion con switch.
+
+## `Trabajamos en el componente SignUp`
+
+- Hemos creado una variable SignIn. Si la variable es false (no estamos registrados), entonces mostramos el formulario.
+
+## `Proceso de SingUp / SingIn`
+
+- Creamos una cuenta en Firebase.
+- Inicializando el objeto auth.
+- Guardando los datos tecleados por el usuario en el formulario.
+- Registrado email y password con auth.createUserWithEmailAndPassword.
+- Logueamos con auth.signInWithEmailAndPassword().
+
+## `Redux`
+
+- Habilitamos el slice userSlice para manejar el estado del usuario en el componente que queramos. 
+
