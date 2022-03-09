@@ -126,3 +126,13 @@ const useStyles = makeStyles((theme) => ({
 - Construimos el componente Row.
 - Hemos habilitado todos los endpoints para acceder a themovieDB para extraer los distintos objetos con la informacion de las peliculas.
 
+## `Request al API`
+
+- Con useEffect, hacemos llamadas asincronas mediante una función llamada fetchData.
+- Esta funcion devuelve request.results.data, que es un array con todas las peliculas.
+
+## `Trabajamos en el componente Paypal`
+
+- Al componente Paypal lo llamamos cuando clickeamos uno de los botones de los planes de Netflix.
+- Los botones nos redirigen a /checkout.
+- En este /checkout vemos el componente Paypal, que contiene el codigo necesario para impletara pagos por Paypal a la página.

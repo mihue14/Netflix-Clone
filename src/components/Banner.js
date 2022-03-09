@@ -36,7 +36,7 @@ const Banner = () => {
         </div>
         <Typography style={{wordWrap: "break-word"}} variant="h6" className={classes.description}>
           {
-            truncate(movie?.overview, 160)
+            truncate(movie?.overview, 150)
           }
         </Typography>
         <div className={classes.fade} />
@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
 
   description: {
     textAlign: "left",
-    paddingRight: "80%",
+    paddingRight: "50%",
   }
 
 })

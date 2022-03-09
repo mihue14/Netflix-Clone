@@ -27,9 +27,9 @@ const Profile = () => {
           <div className={classes.plans}>
             <Typography variant="h6">Email Usuario</Typography>
             <Typography variant="h5" gutterBottom className={classes.plansText}>Plans</Typography>
-            <Plans cost={379}>Netflix Basic</Plans>
-            <Plans cost={639}>Netflix Estandar</Plans>
-            <Plans cost={939}>Netflix Premium</Plans>
+            <Plans cost={1}>Netflix Basic</Plans>
+            <Plans cost={2}>Netflix Estandar</Plans>
+            <Plans cost={3}>Netflix Premium</Plans>
             <NetflixButton onClick={signout} wide="fullwidth">Sing Out</NetflixButton>
           </div>
         </div>

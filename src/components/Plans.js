@@ -19,10 +19,10 @@ const Plans = ({ cost, children, color, wide }) => {
     <div className={classes.root}>
       <Typography wide={wide} className={classes.standard} variant="h5">
         {children}
-        <div>ARS {cost}</div>
+        <div>USD {cost}</div>
       </Typography>
       <NetflixButton
-        onClick={() => handleClick(cost)}
+        onClick={() => handleClick(cost)}d
         radius
         wide={wide}
         color={color}
