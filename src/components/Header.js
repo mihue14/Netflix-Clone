@@ -2,6 +2,7 @@ import { AppBar, Avatar, IconButton, makeStyles, Toolbar } from '@material-ui/co
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import logo from "../images/netflix-logo.png"
+import mihue from "../images/mihue.png";
 
 const Header = () => {
   const classes = useStyles(); // Sirve para agregar estilos.
@@ -26,6 +27,7 @@ const Header = () => {
       <Toolbar className={classes.Toolbar}>
         <IconButton onClick={() => history.push("/")}>  {/* Al hacer click en la imagen de "Netflix" nos dirige a la ruta "/". */}
         <img src={logo} alt="Image not found" className={classes.logo}/> {/* Logo de Netflix */}
+        <img src={mihue} className={classes.mihue}/>
         </IconButton>
         <Avatar variant='square' style={{cursor: "pointer"}} onClick={() => history.push("/profile")}  /> {/* Al hacer click en el avatar nos dirige a la ruta "/profile" */}
       </Toolbar>
@@ -56,6 +58,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
   },
+
+  mihue:{
+    maxWidth: "90px",
+    marginTop: "8px",
+    marginLeft: "14px",
+  }
 })
 );
 
