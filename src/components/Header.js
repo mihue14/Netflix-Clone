@@ -34,9 +34,9 @@ const Header = () => {
 }
 
 const useStyles = makeStyles((theme) => ({
-
+  
   root: {
-    backgroundColor: "#111",
+    backgroundColor: "transparent",
     top: 0,
     left: 0,
     right: 0,

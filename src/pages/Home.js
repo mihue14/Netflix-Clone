@@ -25,7 +25,6 @@ const Home = () => {
 
 const useStyles = makeStyles((theme) => ({
   root: {
- 
   },
 })
 );

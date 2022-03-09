@@ -1,4 +1,3 @@
-import { Counter } from "./features/counter/Counter";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
 import Home from "./pages/Home";
