@@ -9,7 +9,7 @@ import SignUp from "./SingUp";
 
 const Login = () => {
   const classes = useStyles();
-  const [signIn, setSignIn] = useState(true);
+  const [signIn, setSignIn] = useState(false);
 
   return (
     <div className={classes.root}>
@@ -17,7 +17,7 @@ const Login = () => {
       <NetflixButton className={classes.session}>Sing in</NetflixButton>
       <div className={classes.info}>
         {
-          signIn ? <SignUp /> : (
+          !signIn ? <SignUp /> : (
             <>
               <Typography variant="h4" gutterBottom>
               Unlimited films, TV programmes and more.
