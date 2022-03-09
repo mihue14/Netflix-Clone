@@ -121,3 +121,8 @@ const useStyles = makeStyles((theme) => ({
 - Cada vez que cambie, inyecta el usuario en la capa de datos del userSlice.
 - De esta forma recuerda que ya estamos logueados aunque refresquemos la página.
 
+## `Request`
+
+- Construimos el componente Row.
+- Hemos habilitado todos los endpoints para acceder a themovieDB para extraer los distintos objetos con la informacion de las peliculas.
+
