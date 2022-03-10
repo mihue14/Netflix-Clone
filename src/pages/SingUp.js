@@ -23,7 +23,7 @@ const SingUp = () => {
   return (
     <div className={classes.root}>
       <Typography variant="h5" aling="left">
-        Sig In
+        Sign In
       </Typography>
       <form className={classes.form}>
         <NetflixInput
@@ -41,7 +41,7 @@ const SingUp = () => {
           type="password"
         />
         <NetflixButton onClick={signIn} tpye="submit" radius wide="medium">
-          Sig In
+          Sign In
         </NetflixButton>
         <Typography variant="subtitle2">
           New to Netflix ?{" "}
