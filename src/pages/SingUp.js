@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { NetflixButton, NetflixInput } from '../styles/stylescomponents';
 import {auth} from "../firebase";
 import { useHistory } from 'react-router-dom';
+import Header from '../components/Header';
 
 const SingUp = () => {
   const classes = useStyles();
