@@ -5,6 +5,7 @@ import Netflixbanner from '../images/banner.jpg';
 import { NetflixButton, NetflixInput } from '../styles/stylescomponents';
 import { useState } from 'react';
 import SignUp from "./SingUp";
+import mihue from "../images/mihue.png";
 
 
 const Login = () => {
@@ -14,6 +15,7 @@ const Login = () => {
   return (
     <div className={classes.root}>
       <img src={Logo} className={classes.logo} alt="Image not found" />
+      <img src={mihue} className={classes.mihue}/>
       <div className={classes.info}>
         {
           !signIn ? <SignUp /> : (
@@ -58,6 +60,14 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     top: 0,
     left: 20,
+    width: "150px",
+    cursor: "pointer",
+  },
+
+  mihue: {
+    position: "fixed",
+    top: 25,
+    left: 185,
     width: "150px",
     cursor: "pointer",
   },

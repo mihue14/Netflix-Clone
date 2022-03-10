@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import logo from "../images/netflix-logo.png"
 import mihue from "../images/mihue.png";
+import avatar from "../images/avatar.png";
 
 const Header = () => {
   const classes = useStyles(); // Sirve para agregar estilos.
@@ -29,7 +30,7 @@ const Header = () => {
         <img src={logo} alt="Image not found" className={classes.logo}/> {/* Logo de Netflix */}
         <img src={mihue} className={classes.mihue}/>
         </IconButton>
-        <Avatar variant='square' style={{cursor: "pointer"}} onClick={() => history.push("/profile")}  /> {/* Al hacer click en el avatar nos dirige a la ruta "/profile" */}
+        <Avatar src={avatar} variant='square' style={{cursor: "pointer"}} onClick={() => history.push("/profile")}  /> {/* Al hacer click en el avatar nos dirige a la ruta "/profile" */}
       </Toolbar>
     </AppBar>
   )
