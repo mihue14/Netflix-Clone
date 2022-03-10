@@ -6,6 +6,7 @@ import Plans from "../components/Plans";
 import { NetflixButton } from "../styles/stylescomponents";
 import { auth } from '../firebase';
 import { useHistory } from 'react-router-dom';
+import firebase from 'firebase/compat/app';
 
 
 const Profile = () => {
@@ -17,15 +18,17 @@ const Profile = () => {
     history.push("/login");
   }
 
+  const Email = firebase.auth().currentUser.email;
+
   return (
     <div className={classes.root}>
       <Header />
-      <Typography variant="h3">Edit Profile</Typography>
+      <Typography variant="h3">Profile</Typography>
       <div className={classes.info}>
         <img src={NetflixAvatar} alt="Image not found" />
         <div className={classes.details}>
           <div className={classes.plans}>
-            <Typography variant="h6">Email Usuario</Typography>
+            <Typography variant="h6">{Email}</Typography>
             <Typography variant="h5" gutterBottom className={classes.plansText}>Plans</Typography>
             <Plans cost={1}>Netflix Basic</Plans>
             <Plans cost={2}>Netflix Estandar</Plans>
@@ -63,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     marginLeft: theme.spacing(3),
     "& h6": {
-      backgroundColor: "#aaa",
+      backgroundColor: "#878787",
       padding: theme.spacing(1),
       marginBottom: theme.spacing(1),
       fontSize: "18px",
