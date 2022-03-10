@@ -14,7 +14,6 @@ const Login = () => {
   return (
     <div className={classes.root}>
       <img src={Logo} className={classes.logo} alt="Image not found" />
-      <NetflixButton className={classes.session}>Sing in</NetflixButton>
       <div className={classes.info}>
         {
           !signIn ? <SignUp /> : (
